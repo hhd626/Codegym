@@ -1,0 +1,43 @@
+/**
+ * Your task is to design an Artifact class.
+ * There are three types of artifacts kept at the museum.
+ * We know nothing about the first type except the serial number assigned by the museum (for example: 212121).
+ * For the second type, we know the serial number and the culture that created it (for example: 212121, "Aztecs").
+ * For the third type, we know the serial number, the culture that created it, and the century it was created in (for example: 212121, "Aztecs", 12).
+ */
+public class Solution {
+    public static void main(String[] args) {
+        //write your code here
+        Artifact first = new Artifact(12131);
+        Artifact second = new Artifact(12131, "Aztecs");
+        Artifact third = new Artifact(12131, "aztecs", 12);
+
+        //test the input
+        System.out.println(first.serialNumber);
+        System.out.println(second.serialNumber + " " + second.culture);
+        System.out.println(third.serialNumber + " " + third.culture +" " + third.century);
+    }
+}
+
+
+//creat an Artifact class
+public class Artifact {
+    int serialNumber;
+    String culture;
+    int century;
+
+    public Artifact(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public Artifact(int serialNumber, String culture) {
+        this.serialNumber = serialNumber;
+        this.culture = culture;
+    }
+
+    public Artifact(int serialNumber, String culture, int century) {
+        this.serialNumber = serialNumber;
+        this.culture = culture;
+        this.century = century;
+    }
+}
