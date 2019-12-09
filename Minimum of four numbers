@@ -1,0 +1,42 @@
+/**
+*Write a function that computes the minimum of four numbers.
+The function min(a, b, c, d) should use (call) the function min(a, b)
+
+Hint:
+You need to write the body of the two existing min functions.
+
+*/
+public class Solution {
+    public static int min(int a, int b, int c, int d) {
+        //write your code here
+        int min, min2 = min(a, b);
+        if (min2 <= c && min2 <= d ) {
+            min = min2;
+        } else if (c <= min2 && c <= d) {
+            min = c;
+        } else {
+            min = d;
+        }
+        return min;
+
+    }
+
+    public static int min(int a, int b) {
+        //write your code her
+         int min1;
+        if(a < b ) {
+           min1 = a;
+        } else {
+            min1 = b;
+        }
+        return min1;
+
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(min(-20, -10));
+        System.out.println(min(-20, -10, -30, -40));
+        System.out.println(min(-20, -10, -30, 40));
+        System.out.println(min(-40, -10, -30, 40));
+    }
+}
