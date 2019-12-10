@@ -1,0 +1,56 @@
+/**
+*Create 5 Zerg units, 3 Protoss units and 4 Terran units.
+Give them all unique names.
+Requirements:
+
+    •
+    Don't change the Zerg, Protoss, and Terran classes.
+    •
+    Create 5 Zerg objects and name each of them.
+    •
+    Create 3 Protoss objects and name each of them.
+    •
+    Create 4 Terran objects and name each of them.
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        //write your code here
+        Zerg num1 = new Zerg();
+        num1.name = "zerg1";
+        Zerg num2 = new Zerg();
+        num2.name = "zerg2";
+        Zerg num3 = new Zerg();
+        num3.name = "zerg3";
+        Zerg num4 = new Zerg();
+        num4.name = "zerg4";
+        Zerg num5 = new Zerg();
+        num5.name = "zerg5";
+        Protoss n1 = new Protoss();
+        n1.name = "protoss1";
+        Protoss n2 = new Protoss();
+        n2.name = "protoss2";
+        Protoss n3 = new Protoss();
+        n3.name = "protoss3";
+        Terran number1 = new Terran();
+        number1.name = "terran1";
+        Terran number2 = new Terran();
+        number2.name = "terran2";
+        Terran number3 = new Terran();
+        number3.name = "terran3";
+        Terran number4 = new Terran();
+        number4.name = "terran4";
+    }
+
+    public static class Zerg {
+        public String name;
+    }
+
+    public static class Protoss {
+        public String name;
+    }
+
+    public static class Terran {
+        public String name;
+    }
+}
