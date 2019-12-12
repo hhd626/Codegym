@@ -1,0 +1,24 @@
+/**
+*Enter the number and name from the keyboard. Display the following string:
+<name> will take over the world in <number> years. Mwa-ha-ha!
+
+Here's an example:
+Kevin will take over the world in 8 years. Mwa-ha-ha!
+
+The order in which the data is input matters a lot.
+
+*/
+
+import java.io.*;
+
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //write your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String age = reader.readLine();
+        int number = Integer.parseInt(age);
+        String name = reader.readLine();
+         System.out.println(name + " will take over the world in " + number + " years. Mwa-ha-ha!");
+    }
+}
