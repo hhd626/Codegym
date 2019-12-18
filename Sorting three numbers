@@ -1,0 +1,70 @@
+/**
+*Use the keyboard to enter three numbers, and display them in descending order.
+The displayed numbers must be separated by spaces.
+Requirements:
+
+    •
+    The program should read the numbers from the keyboard.
+    •
+    The program should display numbers on the screen.
+    •
+    The program should display three numbers separated by spaces.
+    •
+    The program should display the numbers in descending order.
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //write your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int num1 = Integer.parseInt(reader.readLine());
+        int num2 = Integer.parseInt(reader.readLine());
+        int num3 = Integer.parseInt(reader.readLine());
+        if (num1 >= num2 && num2 >= num3) {
+            System.out.println(num1 + " " + num2 + " " + num3);
+        } else if (num2 >= num1 && num1 >= num3) {
+            System.out.println(num2 + " " + num1 + " " + num3);
+        } else if (num1 >= num3 && num3 >= num2) {
+            System.out.println(num1 + " " + num3 + " " + num2);
+        } else if (num2 >= num3 && num3 >= num1) {
+            System.out.println(num2 + " " + num3 + " " + num1);
+        } else if (num3 >= num2 && num2 >= num1) {
+            System.out.println(num3 + " " + num2 + " " + num1);
+        } else if (num3 >= num1 && num1 >= num2) {
+            System.out.println(num3 + " " + num1 + " " + num2);
+        }
+
+    }
+}
+
+or 
+
+import java.io.*;
+import java.util.Arrays;
+
+public class Solution {
+
+
+    public static void main(String[] args) throws IOException {
+        int a, b, c;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            a = Integer.parseInt(reader.readLine());
+            b = Integer.parseInt(reader.readLine());
+            c = Integer.parseInt(reader.readLine());
+
+            int [] arr = {a,b,c};
+            Arrays.sort(arr);
+            for(int i = arr.length - 1 ; i >= 0; i--){
+                System.out.printf(" %s ", arr[i]);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+}
